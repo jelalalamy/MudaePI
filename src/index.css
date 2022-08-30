@@ -9,7 +9,33 @@ body {
   color: white;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  border-style: solid;
+}
+
+h1 {
+  margin: 10px;
+  padding: 10px;
+  border-style: dotted;
+}
+
+#test {
+  margin: 10px;
+  padding: 10px;
+  border-style: dotted;
+}
+
+p {
+  word-wrap: break-word;
 }
