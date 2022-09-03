@@ -1,10 +1,12 @@
 import Test from './components/Test';
+import Tiles from './components/Tiles';
 
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>MudaePI</h1>
       <Test/>
+      <Tiles/>
     </div>
   );
 }
