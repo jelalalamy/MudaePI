@@ -1,12 +1,12 @@
 import React from 'react'
 import Tile from './Tile'
 
-const Tiles = () => {
+const Tiles = ({ chars }) => {
   return (
     <div className="tilesContainer">
-        <Tile/>
-        <Tile/>
-        <Tile/>
+        {chars.map((char) => (
+            <Tile char={char}/>
+        ))}
     </div>
   )
 }

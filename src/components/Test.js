@@ -13,13 +13,13 @@ const Test = () => {
             const querySnapshot = await getDocs(q);
             let resultString = "";
             querySnapshot.forEach((doc) => {
-                console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+                //console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
                 resultString = resultString.concat(`${doc.id} => ${JSON.stringify(doc.data())}`, "\n");
             });
             setResults(resultString);
         }
         getResults()
-        console.log(results);
+        //console.log(results);
       }, [])
 
     return (

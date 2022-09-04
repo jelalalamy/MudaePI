@@ -15,6 +15,27 @@ body {
   padding: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2c2c33; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -31,12 +52,14 @@ h1 {
 }
 
 #test {
-  margin: 10px;
+  margin: auto;
+  margin-bottom: 10px;
   padding: 10px;
   border-style: dotted;
+  width: 67%;
 }
 
-p {
+#test > p {
   word-wrap: break-word;
 }
 
@@ -44,7 +67,7 @@ p {
   margin: 10px;
   padding: 10px;
   border-style: dotted;
-  flex-grow: 1;
+  flex: 1 1 30%;
 }
 
 .tilesContainer {
@@ -53,7 +76,8 @@ p {
   margin-bottom: 10px;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  width: 67%;
-  
+  width: 67%; 
 }
