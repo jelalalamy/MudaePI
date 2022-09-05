@@ -45,10 +45,23 @@ code {
   border-style: none;
 }
 
-h1 {
+.header {
   margin: 10px;
   padding: 10px;
   border-style: dotted;
+  display:flex;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbarItem {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
 }
 
 #test {
@@ -75,7 +88,8 @@ h1 {
 .tileImage {
   flex-shrink: 0;
   min-width: 100%;
-  min-height: 100%
+  min-height: 100%;
+  opacity: 0.1;
 }
 
 .tileTextLayer {
