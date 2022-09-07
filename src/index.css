@@ -62,6 +62,8 @@ code {
   justify-content: center;
   align-items: center;
   margin-left: 30px;
+  color: white;
+  text-decoration: none;
 }
 
 #test {

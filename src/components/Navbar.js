@@ -1,13 +1,15 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
     <section className="navbar">
-        <h3 className="navbarItem">Characters</h3>
-        <h3 className="navbarItem">Compare</h3>
-        <h3 className="navbarItem">Snapshots</h3>
-        <h3 className="navbarItem">API</h3>
-        <h3 className="navbarItem">About</h3>
+        <Link to="/characters" className="navbarItem">Characters</Link>
+        <Link to="/compare" className="navbarItem">Compare</Link>
+        <Link to="/snapshots" className="navbarItem">Snapshots</Link>
+        <Link to="/api" className="navbarItem">API</Link>
+        <Link to="/about" className="navbarItem">About</Link>
     </section>
   )
 }
