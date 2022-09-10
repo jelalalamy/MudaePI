@@ -11,7 +11,7 @@ const Home = () => {
 
     useEffect(() => {
         const getResults = async () => {
-            const ref = collection(firestore, "2022-08-29");
+            const ref = collection(firestore, "2022-09-08");
             const q = query(ref, orderBy("rank"));
             const querySnapshot = await getDocs(q);
             const res = querySnapshot.docs.map(doc => doc.data());
