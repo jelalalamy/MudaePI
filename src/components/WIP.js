@@ -2,7 +2,9 @@ import React from 'react'
 
 const WIP = () => {
   return (
-    <h1>WIP</h1>
+    <div className="wipWrapper">
+      <h1>Coming soon...</h1>
+    </div>
   )
 }
 

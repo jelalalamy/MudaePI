@@ -146,6 +146,14 @@ code {
   width: 50%;
 }
 
+.wipWrapper {
+  border-style: dashed;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  width: 50%;
+}
+
 .aboutHeader {
   margin-bottom: 10px;
 }
