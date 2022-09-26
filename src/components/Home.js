@@ -3,7 +3,7 @@ import Test from './Test';
 import Tiles from './Tiles';
 import Header from './Header';
 import { useState, useEffect } from 'react'
-import { getDocs, collection, orderBy, query } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query, limit } from 'firebase/firestore';
 import { firestore } from '../config.js';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
         const getResults = async () => {
             const ref = collection(firestore, "2022-09-08");
-            const q = query(ref, orderBy("rank"));
+            const q = query(ref, orderBy("rank"), limit(9));
             const querySnapshot = await getDocs(q);
             const res = querySnapshot.docs.map(doc => doc.data());
             console.log("Fetching results");
