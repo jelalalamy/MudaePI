@@ -11,8 +11,8 @@ const Home = () => {
 
     useEffect(() => {
         const getResults = async () => {
-            const ref = collection(firestore, "2022-09-08");
-            const q = query(ref, orderBy("rank"), limit(9));
+            const ref = collection(firestore, "2022-09-25");
+            const q = query(ref, orderBy("rank"), limit(6));
             const querySnapshot = await getDocs(q);
             const res = querySnapshot.docs.map(doc => doc.data());
             console.log("Fetching results");
@@ -26,8 +26,8 @@ const Home = () => {
     return (
         <div className="Home">
             <Header/>
-            {results.length > 0 && <Test results={results}/>}
             {results.length > 0 ? <Tiles chars={results}/> : 'No characters to show.'}
+            {results.length > 0 && <Test results={results}/>}
         </div>
     );
 }
