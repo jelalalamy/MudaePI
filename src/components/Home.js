@@ -26,7 +26,7 @@ const Home = () => {
     return (
         <div className="Home">
             <Header/>
-            <Test/>
+            {results.length > 0 && <Test results={results}/>}
             {results.length > 0 ? <Tiles chars={results}/> : 'No characters to show.'}
         </div>
     );

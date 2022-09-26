@@ -83,6 +83,8 @@ code {
   padding: 10px;
   border-style: dotted;
   width: 67%;
+  overflow-y: auto;
+  height: 30vh;
 }
 
 #test > p {
@@ -149,15 +151,7 @@ code {
   width: 67%; 
 }
 
-.aboutWrapper, .compareWrapper {
-  border-style: dotted;
-  margin: auto;
-  margin-top: 10px;
-  padding: 10px;
-  width: 50%;
-}
-
-.wipWrapper {
+.aboutWrapper, .compareWrapper, .snapshotsWrapper, .wipWrapper {
   border-style: dotted;
   margin: auto;
   margin-top: 10px;

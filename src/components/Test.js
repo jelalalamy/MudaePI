@@ -3,27 +3,19 @@ import { useState, useEffect } from 'react'
 import { getDocs, collection, orderBy, query } from 'firebase/firestore';
 import { firestore } from '../config.js';
 
-const Test = () => {
-    const [results, setResults] = useState("");
+const Test = ({ results }) => {
+    const [resultsString, setResultsString] = useState("");
 
     useEffect(() => {
-        const getResults = async () => {
-            const ref = collection(firestore, "2022-08-29");
-            const q = query(ref, orderBy("rank"));
-            const querySnapshot = await getDocs(q);
-            let resultString = "";
-            querySnapshot.forEach((doc) => {
-                //console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
-                resultString = resultString.concat(`${doc.id} => ${JSON.stringify(doc.data())}`, "\n");
-            });
-            setResults(resultString);
-        }
-        getResults()
-        //console.log(results);
-      }, [])
+        let resultsString2 = "";
+        results.forEach((doc) => {
+            resultsString2 = resultsString2.concat(`${JSON.stringify(doc, null, 4)},`, "\n");
+        })
+        setResultsString(resultsString2);
+    })
 
     return (
-        <p id="test">{results}</p>
+        <pre id="test">{resultsString}</pre>
     )
 }
 
